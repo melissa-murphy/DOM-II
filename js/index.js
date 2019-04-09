@@ -25,7 +25,16 @@ window.addEventListener('resize', (event) => {
 
 
 // mouseenter, button bump up, text change to 'haha, missed me!', then revert. only 1x per button
+const destButton = document.querySelector('.destination');
 
+destButton.addEventListener('dblclick', (event) => {
+    event.target.style.visibility = 'hidden';
+
+    //reset
+    setTimeout(function() {
+        event.target.style.visibility = visible;
+    }, 3000);
+}, false);
 
 
 // [need replacement], images bounce, etc.
@@ -38,7 +47,7 @@ window.addEventListener('wheel', (event) => {
     alert('ZOOOOOOOOOOOOOM');
 
     //reset
-    setTimeout(function() {
+    setTimeout(function () {
         alert = '';
     }, 3000);
 }, false);
@@ -52,7 +61,7 @@ h2Shadow.addEventListener('mouseover', (event) => {
     event.target.style.transition = 'all 1s';
 
     // reset
-    setTimeout(function() {
+    setTimeout(function () {
         event.target.style.textShadow = '';
     }, 3000);
 }, false);
