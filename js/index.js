@@ -3,7 +3,7 @@
 const fixedHeader = document.querySelector('header');
 
 document.addEventListener('scroll', (event) => {
-    if (fixedHeader < 50) {
+    if (document > 50) {
         fixedHeader.style.height = '5rem';
         fixedHeader.style.transition = 'all 2s';
     } else {
@@ -34,7 +34,7 @@ window.addEventListener('resize', (event) => {
 
 // drag, alert('Zooooom!)
 // dragend to remove alert
-window.addEventListener('onwheel', (event) => {
+window.addEventListener('wheel', (event) => {
     alert('ZOOOOOOOOOOOOOM');
 
     //reset
