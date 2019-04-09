@@ -1,0 +1,11 @@
+{
+  "name": "melissa-murphy-dom-2",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/melissa-murphy/DOM-II.git",
+  "author": "melissa-murphy <melissamurphy.ca@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "less-watch-compiler less css index.less"
+  }
+}
