@@ -32,13 +32,17 @@ destButton.addEventListener('dblclick', (event) => {
 
     //reset
     setTimeout(function() {
-        event.target.style.visibility = visible;
+        event.target.style.visibility = '';
     }, 3000);
 }, false);
 
 
-// [need replacement], images bounce, etc.
-
+// images spin on load
+const firstImg = document.querySelector('.img');
+firstImg.addEventListener('DOMContentLoaded', (event) => {
+    firstImg.style.transform = 'rotate(180deg)';
+    firstImg.style.transition = 'all 2s';
+})
 
 
 // drag, alert('Zooooom!)
