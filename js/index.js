@@ -9,6 +9,14 @@ window.addEventListener('scroll', (event) => {
     }
 })// fluid height nav
 
+// Stop nav refresh
+const navLinks = document.getElementsByTagName('a');
+navLinks.array.forEach(element => {
+    navLinks.addEventListener('click', (event) => {
+        event.preventDefault();
+    })
+});
+
 // Window resize
 window.addEventListener('resize', (event) => {
     alert('Ouch! Just kidding, I am a window.');
@@ -77,31 +85,3 @@ function zoomAlert(msg, duration) {
 //     firstImg.style.transform = 'rotate(180deg)';
 //     firstImg.style.transition = 'all 2s';
 // })
-
-
-// // drag, alert('Zooooom!)
-// // dragend to remove alert
-// window.addEventListener('wheel', (event) => {
-//     alert('ZOOOOOOOOOOOOOM');
-
-//     //reset
-//     setTimeout(function () {
-//         alert = '';
-//     }, 3000);
-// }, false);
-
-
-// // mouseover, text-content h2, dropshadow fades in
-// const h2Shadow = document.querySelector('h2');
-
-// h2Shadow.addEventListener('mouseover', (event) => {
-//     event.target.style.textShadow = '3px 3px 5px black';
-//     event.target.style.transition = 'all 1s';
-
-//     // reset
-//     setTimeout(function () {
-//         event.target.style.textShadow = '';
-//     }, 3000);
-// }, false);
-
-
