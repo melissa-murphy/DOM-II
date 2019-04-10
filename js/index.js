@@ -15,22 +15,22 @@ window.addEventListener('resize', (event) => {
 })
 
 // Hidden destination
-const destButton = document.querySelector('.destination:first-child');
-const contentPick = document.querySelector('.content-pick')
+const destButton = document.querySelector('.destination p');
+const contentPick = document.querySelector('.content-pick');
 
 destButton.addEventListener('dblclick', (event) => {
-    // event.target.style.visibility = 'hidden';
-    event.target.getInnerText = 'Where did I go?';
+    event.target.style.visibility = 'hidden';
+    // event.target.getInnerText = 'Where did I go?';
+
     // not working yet
         // let jokeText = '<p>Where did I go?</p>';
         // event.contentPick.appendChild(jokeText);
 
-    //reset
+//     //reset
     setTimeout(function () {
-        // event.target.style.visibility = '';
-
+        event.target.style.visibility = '';
     }, 2000);
-}, true);
+}, false);
 
 // Header depth
 const h2Shadow = document.querySelector('h2');
@@ -45,8 +45,22 @@ h2Shadow.addEventListener('mouseover', (event) => {
     }, 3000);
 }, false);
 
+// Endless Zoooooom
+window.addEventListener('wheel', (event) => {
+    zoomAlert('ZOOOOOOOOOOOM!', 1500);
 
 
+});
+
+function zoomAlert(msg, duration) {
+    const element = document.createElement("div");
+    element.setAttribute("style","background-color:white;height:150px;width:350px;font-size:4rem;");
+    element.innerHTML = msg;
+    setTimeout(function() {
+        element.parentNode.removeChild(element);
+    }, duration);
+    document.body.appendChild(element);
+}
 
 
 
